@@ -1,0 +1,13 @@
+name: hola-mundo
+
+on: [push]
+
+jobs:
+  hola-mundo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+      - run: ruby hola_mundo.rb
